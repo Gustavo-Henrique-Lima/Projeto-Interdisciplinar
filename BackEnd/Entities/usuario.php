@@ -1,20 +1,24 @@
 <?php
     class Usuario
     {
-        private $login;
+        private $matricula;
         private $nome;
         private $senha;
-    }
-    
-    public function __construtor($matricula,$nome,$senha)
-    {
-            $this->login=$matricula;
+        
+        public function __construct($matricula,$nome,$senha)
+        {
+            $this->matricula=$matricula;
             $this->nome=$nome;
             $this->senha=$senha;
-    }
-
-    function getNome()
-    {
-        return $this->nome;
+        }
+    
+        public function getMatricula()
+        {
+            return $this->matricula;
+        }
+        public function getNome()
+        {
+            return $this->nome;
+        }
     }
 ?>
