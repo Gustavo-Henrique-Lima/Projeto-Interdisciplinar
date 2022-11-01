@@ -1,3 +1,11 @@
 <?php
-    $banco = new PDO('mysql:host=;dbname=', '','')or print (mysql_error());
+    $usuario="";
+    $senha="";
+    $database="";
+    $host="";
+    $mysqli= new mysqli($host,$usuario,$senha,$database);
+    if($mysqli->error)
+    {
+        die("Fala ao conectar ao banco de dados".$mysqli->error);    
+    }
 ?>
