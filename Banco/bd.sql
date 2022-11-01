@@ -1,3 +1,5 @@
+CREATE SCHEMA projetointerdisciplinar;
+
 CREATE TABLE professor
 (
 	siepe VARCHAR(40),
