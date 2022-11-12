@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperação de Senha</title>
     <!--Normalize Css-->
     <link rel="stylesheet" href="../css/normalize.css" />
     <!--Adicionando Bootstrap-->
@@ -14,7 +15,6 @@
     <!--Adicionando Css-->
     <link rel="stylesheet" href="../css/style.css" />
     <!--Adicionando Favicon-->
-    <title>Login</title>
   </head>
   <body class="bgImage">
     <section class="container-fluid text-center alinhamento">
@@ -23,25 +23,22 @@
           class="col-lg-5 bg-primary align-items-center controlScreenLogin paddingPagesUp"
         >
           <p class="fontTextLeftHeader fontSizeHeader paddingItens">
-            Faça Login
+            Recuperar Senha
           </p>
           <p class="fontTextLeftBody fontSizeBody paddingItens">
-            Por favor, preencha os campos de siepe <br />
-            e senha corretamente, se por acaso você <br />
-            tenha esquecido sua senha, clique na opção<br />
-            logo abaixo "Recuperar Senha".
+            Por favor, nos informe o seu email de acesso ao MyFreq, logo em
+            seguida lhe enviaremos algumas instruções para que você recupere sua
+            senha.
           </p>
           <a
             class="btn btnInf btn-outline-light btnSize paddingPagesDown"
-            href="recuperar_senha.php"
+            href="../../index.php"
           >
-            Recuperar senha
+            Voltar para o login
           </a>
         </div>
         <div class="col-lg bg-white Login paddingPagesUp">
-          <p class="colorParag fontSizeBody paddingItens">
-            Acesse o MyFreq aqui:
-          </p>
+          <p class="colorParag fontSizeBody paddingItens">Informe seu email:</p>
           <div
             style="width: 22rem"
             class="input-group input-group-sm mb-4 m-auto"
@@ -49,35 +46,21 @@
             <span
               class="input-group-text bg-primary text-white"
               id="basic-addon1"
-              >Siepe:</span
+              >Email:</span
             >
             <input
               type="text"
               class="form-control"
-              placeholder="Digite seu siepe!"
+              placeholder="Digite seu email!"
               aria-label="UserEmail"
               aria-describedby="basic-addon1"
             />
           </div>
-          <div style="width: 22rem" class="input-group input-group-sm m-auto">
-            <span
-              class="input-group-text bg-primary text-white"
-              id="basic-addon1"
-              >Senha:</span
-            >
-            <input
-              type="password"
-              class="form-control"
-              placeholder="Digite sua senha!"
-              aria-label="UserSenha"
-              aria-describedby="basic-addon1"
-            />
-          </div>
-          <a
+          <input
             class="btn btnLogin btn-outline-primary btnSize mt-4 paddingPagesDown"
-            href=""
-            >Entrar</a
-          >
+            type="submit"
+            value="Enviar"
+            >
         </div>
       </div>
     </section>
