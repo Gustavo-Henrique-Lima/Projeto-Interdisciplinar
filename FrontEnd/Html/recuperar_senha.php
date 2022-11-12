@@ -1,3 +1,6 @@
+<?php
+  include_once ("../../BackEnd/Services/recuperacaoSenha.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,11 +61,12 @@
             />
           </div>
 
-          <a
+          <input
             class="btn btnLogin btn-outline-primary btnSize mt-4 paddingPagesDown"
-            href=""
-            >Enviar</a
-          >
+            name="enviar"
+            value="Enviar"
+            type="submit"
+            >
         </div>
       </div>
     </section>
