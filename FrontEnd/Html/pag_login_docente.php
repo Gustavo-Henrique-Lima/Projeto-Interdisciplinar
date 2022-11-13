@@ -33,7 +33,7 @@
           </p>
           <a
             class="btn btnInf btn-outline-light btnSize paddingPagesDown"
-            href="recuperar_senha.php"
+            href="recuperar_senha_docente.php"
           >
             Esqueceu sua senha?
           </a>
