@@ -20,6 +20,7 @@
     <!--Adicionando Favicon-->
   </head>
   <body class="bgImage">
+  <div class="alert"></div>
     <section class="container-fluid text-center alinhamento">
       <div class="row tamcontainer">
         <div
@@ -35,7 +36,7 @@
           </p>
           <a
             class="btn btnInf btn-outline-light btnSize paddingPagesDown"
-            href="../../index.php"
+            href="pag_login_docente.php"
           >
             Voltar para o login
           </a>
@@ -46,24 +47,38 @@
             style="width: 22rem"
             class="input-group input-group-sm mb-4 m-auto"
           >
+          <form style="width: 22rem" class="input-group input-group-sm mb-4 m-auto" action="recuperar_senha_docente.php" method="POST">
             <span
-              class="input-group-text bg-primary text-white"
+              style="height: 2rem"
+              class="input-group-text bg-primary text-white mt-4"
               id="basic-addon1"
               >Email:</span
             >
             <input
+              style="height: 2rem"
               type="text"
-              class="form-control"
+              class="form-control mt-4"
               placeholder="Digite seu email!"
               aria-label="UserEmail"
               aria-describedby="basic-addon1"
+              name="email"
             />
-          </div>
-          <input
-            class="btn btnLogin btn-outline-primary btnSize mt-4 paddingPagesDown"
-            type="submit"
-            value="Enviar"
-            >
+            <input type="submit" name="enviar" value="Enviar" class="btn btnLogin btn-outline-primary btnSize mt-4 paddingPagesDown" value="GO"/>
+          </form>
+            <?php
+                    require_once("../../BackEnd/Services/recuperacaoSenha.php");
+                    if(isset($_POST['enviar']) && isset($_POST['email']))
+                    {
+                        $email=$_POST['email'];
+                        if(strlen($email)>0)
+                        {
+                          alterarSenha($email);
+                        }
+                        else{
+                          campoVazio();
+                        }
+                    }
+            ?>
         </div>
       </div>
     </section>

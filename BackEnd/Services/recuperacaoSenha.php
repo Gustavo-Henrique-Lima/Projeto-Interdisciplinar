@@ -1,7 +1,7 @@
 <?php
     function alterarSenha($email)
     {
-        include_once("../Connection/connection.php");
+        require_once('conexao.php');
         $email=$mysqli->escape_string($email);
         if(!filter_var($email,FILTER_VALIDATE_EMAIL))
         {

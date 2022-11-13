@@ -1,7 +1,7 @@
 <?php
     function alterarSenha($email)
     {
-        include_once("../Connection/connection.php");
+        require_once('conexao.php');
         $email=$mysqli->escape_string($email);
         if(!filter_var($email,FILTER_VALIDATE_EMAIL))
         {
@@ -67,17 +67,17 @@
     function campoVazio()
     {
         echo("
-            <script>
-                const msg = 'Preencha todos os campos';
-                const divMessage = document.querySelector('.alert');
-                const message = document.createElement('p');
-                message.classList.add('message');
-                message.innerText = msg;
-                divMessage.appendChild(message);
-                setTimeout(() => 
-                {
-                    message.style.display = 'none';
-                  }, 3000);
-            </script>");
+        <script>
+            const msg = 'Preencha todos os campos';
+            const divMessage = document.querySelector('.alert');
+            const message = document.createElement('p');
+            message.classList.add('message');
+            message.innerText = msg;
+            divMessage.appendChild(message);
+            setTimeout(() => 
+            {
+                message.style.display = 'none';
+              }, 3000);
+        </script>");
     }
 ?>

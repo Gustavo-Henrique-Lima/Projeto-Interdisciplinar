@@ -34,4 +34,4 @@ CREATE TABLE estagio
 );
 select * from professor;
 INSERT INTO professor VALUES(001,'Gustavo Henrique','de Lima','Nascimento','ghln@discente.ifpe.edu.br','123');
-INSERT INTO aluno VALUES(001,'Everson','Silva','Nascimento','evns8@discente.ifpe.edu.br','123');
+INSERT INTO aluno VALUES(001,'evns8@discente.ifpe.edu.br','Everson','Silva','Nascimento','123');
