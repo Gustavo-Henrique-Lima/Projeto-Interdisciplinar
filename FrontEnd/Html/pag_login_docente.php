@@ -29,13 +29,13 @@
             Por favor, preencha os campos de siepe <br />
             e senha corretamente, se por acaso você <br />
             tenha esquecido sua senha, clique na opção<br />
-            logo abaixo "Recuperar Senha".
+            logo abaixo "Esqueceu sua senha?".
           </p>
           <a
             class="btn btnInf btn-outline-light btnSize paddingPagesDown"
             href="recuperar_senha.php"
           >
-            Recuperar senha
+            Esqueceu sua senha?
           </a>
         </div>
         <div class="col-lg bg-white Login paddingPagesUp">
