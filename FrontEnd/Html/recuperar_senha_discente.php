@@ -1,5 +1,5 @@
 <?php
-  include_once"../../BackEnd/Services/recuperacaoSenha.php"
+  include_once"../../BackEnd/Services/recuperacaoSenhaDiscente.php"
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
