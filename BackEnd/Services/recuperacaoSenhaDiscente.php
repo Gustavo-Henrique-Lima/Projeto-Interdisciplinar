@@ -1,23 +1,12 @@
 <?php
+    include_once("alertas.php");
     function alterarSenha($email)
     {
         require_once('conexao.php');
         $email=$mysqli->escape_string($email);
         if(!filter_var($email,FILTER_VALIDATE_EMAIL))
         {
-            echo("
-                <script>
-                    const msg = 'E-mail inválido';
-                    const divMessage = document.querySelector('.alert');
-                    const message = document.createElement('p');
-                    message.classList.add('message');
-                    message.innerText = msg;
-                    divMessage.appendChild(message);
-                    setTimeout(() => 
-                    {
-                        message.style.display = 'none';
-                    }, 3000);
-            </script>");
+            emailInvalido();
         }
         else{
             $sql="SELECT nome FROM aluno WHERE email='$email'";
@@ -32,52 +21,12 @@
                 {
                     $sql_code="UPDATE aluno SET senha='$novasenha' WHERE email='$email'";
                     $sql_query=$mysqli->query($sql_code) or die($mysqli->error);
-                    echo("
-                    <script>
-                        const msg = 'Sucesso, por favor confira o seu e-mail!';
-                        const divMessage = document.querySelector('.alert');
-                        const message = document.createElement('p');
-                        message.classList.add('message');
-                        message.innerText = msg;
-                        divMessage.appendChild(message);
-                        setTimeout(() => 
-                        {
-                            message.style.display = 'none';
-                        }, 3000);
-                    </script>");
+                    enviouEmail();
                 }
             }
             else{
-                echo("
-                <script>
-                    const msg = 'E-mail não cadastrado';
-                    const divMessage = document.querySelector('.alert');
-                    const message = document.createElement('p');
-                    message.classList.add('message');
-                    message.innerText = msg;
-                    divMessage.appendChild(message);
-                    setTimeout(() => 
-                    {
-                        message.style.display = 'none';
-                    }, 3000);
-                </script>");
+                emailInvalido();
             }
         }
-    }
-    function campoVazio()
-    {
-        echo("
-        <script>
-            const msg = 'Preencha todos os campos';
-            const divMessage = document.querySelector('.alert');
-            const message = document.createElement('p');
-            message.classList.add('message');
-            message.innerText = msg;
-            divMessage.appendChild(message);
-            setTimeout(() => 
-            {
-                message.style.display = 'none';
-              }, 3000);
-        </script>");
     }
 ?>

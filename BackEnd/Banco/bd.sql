@@ -10,7 +10,6 @@ CREATE TABLE professor
     senha VARCHAR(255),
 	PRIMARY KEY (siepe)
 );
-
 CREATE TABLE aluno
 (
 	matricula VARCHAR(20),
@@ -33,5 +32,6 @@ CREATE TABLE estagio
 	FOREIGN KEY (matricula_aluno) REFERENCES aluno(matricula)
 );
 select * from professor;
+SELECT * FROM aluno;
 INSERT INTO professor VALUES(001,'Gustavo Henrique','de Lima','Nascimento','ghln@discente.ifpe.edu.br','123');
-INSERT INTO aluno VALUES(001,'evns8@discente.ifpe.edu.br','Everson','Silva','Nascimento','123');
+INSERT INTO aluno VALUES(001,'ens8@discente.ifpe.edu.br','Everson','Silva','Nascimento','123');

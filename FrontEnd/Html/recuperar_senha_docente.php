@@ -1,6 +1,3 @@
-<?php
-  include_once"../../BackEnd/Services/recuperacaoSenha.php";
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -8,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recuperação de Senha</title>
+    <script src="../myScript/sweetAlert.js"></script>
     <!--Normalize Css-->
     <link rel="stylesheet" href="../css/normalize.css" />
     <!--Adicionando Bootstrap-->

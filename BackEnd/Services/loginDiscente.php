@@ -1,4 +1,5 @@
 <?php
+    include_once("alertas.php");
     function efetuarLogin($matricula,$password)
     {
         require_once('conexao.php');
@@ -15,52 +16,11 @@
                 echo "Bem-vindo ".$dado["nome"];
             }
             else{
-                echo("
-                <script>
-                    const msg = 'Senha inválida';
-                    const divMessage = document.querySelector('.alert');
-                    const message = document.createElement('p');
-                    message.classList.add('message');
-                    message.innerText = msg;
-                    divMessage.appendChild(message);
-                    setTimeout(() => 
-                    {
-                        message.style.display = 'none';
-                    }, 3000);
-                </script>");
+                senhaInvalida();
             }
         }
         else{
-            echo("
-                <script>
-                    const msg = 'Matrícula não cadastrada';
-                    const divMessage = document.querySelector('.alert');
-                    const message = document.createElement('p');
-                    message.classList.add('message');
-                    message.innerText = msg;
-                    divMessage.appendChild(message);
-                    setTimeout(() => 
-                    {
-                        message.style.display = 'none';
-                    }, 3000);
-                </script>");
+            loginInvalido();
         }
-    }
-
-    function campoVazio()
-    {
-        echo("
-            <script>
-                const msg = 'Preencha todos os campos';
-                const divMessage = document.querySelector('.alert');
-                const message = document.createElement('p');
-                message.classList.add('message');
-                message.innerText = msg;
-                divMessage.appendChild(message);
-                setTimeout(() => 
-                {
-                    message.style.display = 'none';
-                  }, 3000);
-            </script>");
     }
 ?>
