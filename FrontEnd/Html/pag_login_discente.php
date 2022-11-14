@@ -17,6 +17,7 @@
     <title>Login</title>
   </head>
   <body class="bgImage">
+  <div class="alert"></div>
     <section class="container-fluid text-center alinhamento">
       <div class="row tamcontainer">
         <div
@@ -42,42 +43,32 @@
           <p class="colorParag fontSizeBody paddingItens">
             Acesse o MyFreq aqui:
           </p>
-          <div
-            style="width: 22rem"
-            class="input-group input-group-sm mb-4 m-auto"
-          >
-            <span
-              class="input-group-text bg-primary text-white"
-              id="basic-addon1"
-              >Matrícula:</span
-            >
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Digite sua matrícula!"
-              aria-label="UserEmail"
-              aria-describedby="basic-addon1"
-            />
-          </div>
-          <div style="width: 22rem" class="input-group input-group-sm m-auto">
-            <span
-              class="input-group-text bg-primary text-white"
-              id="basic-addon1"
-              >Senha:</span
-            >
-            <input
-              type="password"
-              class="form-control"
-              placeholder="Digite sua senha!"
-              aria-label="UserSenha"
-              aria-describedby="basic-addon1"
-            />
-          </div>
-          <a
-            class="btn btnLogin btn-outline-primary btnSize mt-4 paddingPagesDown"
-            href=""
-            >Entrar</a
-          >
+          <form action = "pag_login_discente.php" method="POST">
+              <div style="width: 23rem" class="input-group input-group-sm mb-4 m-auto">
+                  <span class="input-group-text bg-primary text-white" id="basic-addon1">Matrícula:</span>
+                  <input name = "matricula" type="text" class="form-control" placeholder="Digite sua matrícula!" aria-label="UserEmail" aria-describedby="basic-addon1"/>
+              </div>
+              <div style="width: 23rem" class="input-group input-group-sm m-auto">
+                <span style="height: 2rem" class="input-group-text bg-primary text-white" id="basic-addon1">Senha:</span>
+                <input name = "senha" style="height: 2rem" type="password" class="form-control" placeholder="Digite sua senha!" aria-label="UserSenha" aria-describedby="basic-addon1"/>
+            </div>
+              <input type="submit" name="enviar" value="Entrar" class="btn btnLogin btn-outline-primary btnSize mt-4 paddingPagesDown"/>
+          </form>
+          <?php
+              require_once("../../BackEnd/Services/loginDiscente.php");
+              if(isset($_POST['enviar']) && isset($_POST['matricula']) && isset($_POST['senha']))
+              {
+                $matricula=$_POST['matricula'];
+                $senha=$_POST['senha'];
+                if(strlen($matricula)>0 && strlen($senha))
+                {
+                  efetuarLogin($matricula,$senha);
+                }
+                else{
+                  campoVazio();
+                }
+              }
+          ?>
         </div>
       </div>
     </section>
