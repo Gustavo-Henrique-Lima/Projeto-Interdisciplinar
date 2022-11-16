@@ -7,8 +7,9 @@
         private $sobreNome;
         private $ultimoNome;
         private $senha;
-        
-        public function __construct($matricula,$email,$nome,$sobreNome,$ultimoNome,$senha)
+        private $foto;
+
+        public function __construct($matricula,$email,$nome,$sobreNome,$ultimoNome,$senha,$foto)
         {
             $this->matricula=$matricula;
             $this->email=$email;
@@ -16,6 +17,7 @@
             $this->sobreNome=$sobreNome;
             $this->ultimoNome=$ultimoNome;
             $this->senha=$senha;
+            $this->foto=$foto;
         }
     
         public function getMatricula()
@@ -41,6 +43,14 @@
         public function getSenha()
         {
             return $this->senha;
+        }
+        public function getFoto()
+        {
+            return $this->foto;
+        }
+        public function setSenha($senha)
+        {
+            $this->senha=$senha;
         }
     }
 ?>

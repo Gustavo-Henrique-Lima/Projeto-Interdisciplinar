@@ -7,8 +7,9 @@
         private $ultimoNome;
         private $email;
         private $senha;
-        
-        public function __construct($siepe,$nome,$sobreNome,$ultimoNome,$email,$senha)
+        private $foto;
+
+        public function __construct($siepe,$nome,$sobreNome,$ultimoNome,$email,$senha,$foto)
         {
             $this->siepe=$siepe;
             $this->nome=$nome;
@@ -16,6 +17,7 @@
             $this->ultimoNome=$ultimoNome;
             $this->email=$email;
             $this->senha=$senha;
+            $this->foto=$foto;
         }
     
         public function getSiepe()
@@ -41,6 +43,14 @@
         public function getSenha()
         {
             return $this->senha;
+        }
+        public function getFoto()
+        {
+            return $this->foto;
+        }
+        public function setSenha($senha)
+        {
+            $this->senha=$senha;
         }
     }
 ?>
