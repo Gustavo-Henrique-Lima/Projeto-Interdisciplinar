@@ -11,9 +11,19 @@
         $total=$execut->num_rows;
         if($total>0)
         {
+            include_once("../../BackEnd/Entities/Discente.php");
             if(password_verify($password,$dado["senha"]))
             {
-                echo "Bem-vindo ".$dado["nome"];
+                $aluno=new Discente($dado["matricula"],$dado["email"],$dado["nome"],$dado["sobrenome"],$dado["ultimonome"],$dado["senha"],$dado["PATH"]);
+                if(!isset($_SESSION))
+                {
+                    session_start();
+                }
+                $_SESSION['nome']=$aluno->getNome();
+                $_SESSION['foto']=$aluno->getFoto();
+                $_SESSION['matricula']=$aluno->getMatricula();
+                $_SESSION['email']=$aluno->getEmail();
+                header("Location: perfil_usuario.php");
             }
             else{
                 senhaInvalida();
