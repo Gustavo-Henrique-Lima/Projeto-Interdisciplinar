@@ -23,7 +23,7 @@
                 $_SESSION['foto']=$professor->getFoto();
                 $_SESSION['siepe']=$professor->getSiepe();
                 $_SESSION['email']=$professor->getEmail();
-                header("Location: telaInicial.php");
+                header("Location: perfil_usuario.php");
             }
             else{
                 senhaInvalida();
