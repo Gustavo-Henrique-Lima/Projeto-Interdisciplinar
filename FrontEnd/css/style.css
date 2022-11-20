@@ -1,33 +1,28 @@
-* 
-{
+* {
   padding: 0;
   margin: 0;
 }
 
-.bgImage 
-{
+.bgImage {
   background-image: url("../images/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.fontTextLeftHeader 
-{
+.fontTextLeftHeader {
   font-family: "Almarai", "arial", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   color: #fff;
 }
 
-.fontTextLeftBody 
-{
+.fontTextLeftBody {
   font-family: "Antic Didone", "arial", sans-serif;
   font-size: 1rem;
   color: #fff;
 }
 
-.alinhamento 
-{
+.alinhamento {
   min-height: 100%;
   min-height: 100vh;
   display: flex;
@@ -36,20 +31,17 @@
   width: 68%;
 }
 
-.tamcontainer 
-{
+.tamcontainer {
   width: 60rem;
   box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.3);
 }
 
-.colorParag 
-{
+.colorParag {
   color: #49a490;
   font-weight: bold;
 }
 
-.message 
-{
+.message {
   font-family: "Antic Didone", "arial", sans-serif;
   font-weight: bold;
   padding: 10px 10px 10px 20px;
@@ -60,13 +52,12 @@
   border-radius: 0px 30px 30px 0px;
   color: #49a490;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-  font-size: 1.3rem;
+  font-size: 1rem;
   animation: slidein 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slideend 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@keyframes slidein 
-{
+@keyframes slidein {
   0% {
     transform: translateX(-1000px);
     opacity: 0;
@@ -76,8 +67,7 @@
     opacity: 1;
   }
 }
-@keyframes slideend 
-{
+@keyframes slideend {
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -87,159 +77,133 @@
     opacity: 0;
   }
 }
-
-.btnLogin:hover 
-{
+.btnLogin:hover {
   color: white;
 }
 
-.btnInf:hover 
-{
+.btnInf:hover {
   color: #49a490;
 }
 
-.paddingPagesUp 
-{
+.paddingPagesUp {
   padding-top: 7rem;
 }
 
-.paddingPagesDown 
-{
+.paddingPagesDown {
   margin-bottom: 7rem;
 }
 
-@media (min-width: 992px) 
-{
-  .paddingItens 
-  {
+a {
+  text-decoration: none;
+}
+
+.sombra {
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 992px) {
+  .paddingItens {
     padding-bottom: 2rem;
   }
-  .controlScreenIndex 
-  {
+  .controlScreenIndex {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 }
-
-@media (max-width: 991px) 
-{
-  .fontSizeHeader 
-  {
+@media (max-width: 991px) {
+  .fontSizeHeader {
     font-size: 1.1rem;
   }
-  .controlScreenIndex 
-  {
+  .controlScreenIndex {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
-  .paddingPagesUp 
-  {
+  .paddingPagesUp {
     padding-top: 0;
   }
-  .paddingPagesDown 
-  {
+  .paddingPagesDown {
     margin-bottom: 0;
   }
 }
-
-@media (max-width: 425px) 
-{
-  .controlScreenIndex 
-  {
+@media (max-width: 425px) {
+  .controlScreenIndex {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  .fontSizeHeader 
-  {
+  .fontSizeHeader {
     font-size: 1.2rem;
   }
-  .fontSizeBody 
-  {
+  .fontSizeBody {
     font-size: 0.8rem;
   }
-  .btnSize 
-  {
+  .btnSize {
     width: 4rem;
     font-size: 0.5rem;
   }
-  .message 
-  {
+  .message {
     font-size: 0.6rem;
   }
-  .paddingPagesUp 
-  {
+  .paddingPagesUp {
     padding-top: 0;
   }
-  .paddingPagesDown 
-  {
+  .paddingPagesDown {
     margin-bottom: 0;
   }
 }
-
-@media (max-width: 350px) 
-{
-  .controlScreenIndex
-  {
+@media (max-width: 350px) {
+  .controlScreenIndex {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-  .controlScreenIndex 
-  {
+  .controlScreenIndex {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  .fontSizeHeader 
-  {
+  .fontSizeHeader {
     font-size: 0.9rem;
   }
-  .fontSizeBody 
-  {
+  .fontSizeBody {
     font-size: 0.7rem;
   }
-  .message 
-  {
+  .message {
     font-size: 0.6rem;
   }
-  .paddingPagesUp 
-  {
+  .paddingPagesUp {
     padding-top: 0;
   }
-  .paddingPagesDown 
-  {
+  .paddingPagesDown {
     margin-bottom: 0;
   }
 }
-
-@media (max-width: 280px) 
-{
-  .controlScreenIndex 
-  {
+@media (max-width: 280px) {
+  .controlScreenIndex {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-  .controlScreenIndex
-  {
+  .controlScreenIndex {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  .fontSizeHeader 
-  {
+  .fontSizeHeader {
     font-size: 0.8rem;
   }
-  .fontSizeBody 
-  {
+  .fontSizeBody {
     font-size: 0.5rem;
   }
-  .message 
-  {
+  .message {
     font-size: 0.6rem;
   }
-  .paddingPagesUp 
-  {
+  .paddingPagesUp {
     padding-top: 0;
   }
-  .paddingPagesDown 
-  {
+  .paddingPagesDown {
     margin-bottom: 0;
   }
 }
+.fotoPerfil {
+  border-radius: 100%;
+  width: 7rem;
+  height: 7rem;
+}
+
+/*# sourceMappingURL=style.css.map */
