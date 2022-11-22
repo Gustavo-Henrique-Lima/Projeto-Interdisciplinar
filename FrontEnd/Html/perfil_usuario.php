@@ -1,8 +1,5 @@
 <?php
-    if(!isset($_SESSION))
-    {
-        session_start();
-    }
+    include("../../BackEnd/Services/protect.php")
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

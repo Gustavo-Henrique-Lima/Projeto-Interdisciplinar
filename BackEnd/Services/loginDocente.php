@@ -21,7 +21,7 @@
                 }
                 $_SESSION['nome']=$professor->getNome();
                 $_SESSION['foto']=$professor->getFoto();
-                $_SESSION['siepe']=$professor->getSiepe();
+                $_SESSION['matricula']=$professor->getSiepe();
                 $_SESSION['email']=$professor->getEmail();
                 header("Location: perfil_usuario.php");
             }
