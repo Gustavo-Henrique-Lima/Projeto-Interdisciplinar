@@ -1,5 +1,5 @@
 <?php
-    include("../../BackEnd/Services/protect.php")
+    include("../../BackEnd/Services/protect.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
