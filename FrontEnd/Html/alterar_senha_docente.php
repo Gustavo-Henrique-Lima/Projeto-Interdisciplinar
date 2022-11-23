@@ -40,7 +40,7 @@
               <a
                 class="nav-link active text-white"
                 aria-current="page"
-                href="calendariodiscente.php"
+                href="calendariodocente.php"
                 >Home</a
               >
             </li>
@@ -73,7 +73,7 @@
                 echo '<p style="color:red">As senhas digitadas não conferem, por favor tente novamente.</p>';
                }
                else{
-                include_once("../../BackEnd/Services/alterarSenhaDiscente.php");
+                include_once("../../BackEnd/Services/alterarSenhaDocente.php");
                 $mat=$_SESSION['matricula'];
                 alterarSenha($senha1,$mat);
                }
@@ -83,7 +83,7 @@
              }
            }
       ?>
-      <form class="mt-5 text-center" action="alterar_senha_discente.php" method="POST">
+      <form class="mt-5 text-center" action="alterar_senha_docente.php" method="POST">
         <div
           style="width: 23rem"
           class="input-group input-group-sm mb-4 m-auto"

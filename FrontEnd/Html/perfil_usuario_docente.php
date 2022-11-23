@@ -45,7 +45,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="perfil_usuario.php"
+              <a class="nav-link text-white" href="perfil_usuario_docente.php"
                 >Perfil</a
               >
             </li>
@@ -77,7 +77,7 @@
           >
           <div class="mt-4" action="">
             <a
-              href="alterar_senha.php"
+              href="alterar_senha_docente.php"
               class="btn btnLogin btn-outline-primary"
             >
               Alterar Senha
