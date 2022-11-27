@@ -27,15 +27,15 @@ CREATE TABLE estagio
 (
 	matricula_aluno VARCHAR(20),
     inicio TIMESTAMP,
-    fim TIMESTAMP NOT NULL,
     descricao VARCHAR(80) NOT NULL,
-    local VARCHAR(50) NOT NULL,
+	lugar VARCHAR(50) NOT NULL,
     PRIMARY KEY (matricula_aluno,inicio),
-	FOREIGN KEY (matricula_aluno) REFERENCES aluno(matricula)
+    FOREIGN KEY (matricula_aluno) REFERENCES aluno(matricula)
 );
+
+INSERT INTO professor VALUES(001,'Gustavo Henrique','de Lima','Nascimento','ghln@discente.ifpe.edu.br','123',null);
+INSERT INTO aluno VALUES('10','ens8@discente.ifpe.edu.br','Everson','Silva','Nascimento','123',null);
 
 SELECT * FROM professor;
 SELECT * FROM aluno;
 SELECT * FROM estagio;
-INSERT INTO professor VALUES(001,'Gustavo Henrique','de Lima','Nascimento','ghln@discente.ifpe.edu.br','123',null);
-INSERT INTO aluno VALUES('001','ens8@discente.ifpe.edu.br','Everson','Silva','Nascimento','123',null);
