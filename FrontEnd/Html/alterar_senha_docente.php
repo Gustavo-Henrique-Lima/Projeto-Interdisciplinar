@@ -50,7 +50,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href=""
+              <a class="nav-link text-white" href="../../BackEnd/Services/logout.php"
                 >Sair</a
               >
             </li>

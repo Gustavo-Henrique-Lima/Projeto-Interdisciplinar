@@ -51,7 +51,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Sair</a>
+              <a class="nav-link text-white" href="../../BackEnd/Services/logout.php">Sair</a>
             </li>
           </ul>
         </div>
