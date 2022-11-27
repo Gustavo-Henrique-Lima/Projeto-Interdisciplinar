@@ -20,7 +20,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-      <a class="navbar-brand fontTextLeftHeader ms-1" href="#">MyFreq</a>
+      <a class="navbar-brand fontTextLeftHeader ms-1" href="criar_estagio.php">MyFreq</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -40,13 +40,18 @@
               <a
                 class="nav-link active text-white"
                 aria-current="page"
-                href="calendariodocente.php"
+                href="criar_estagio.php"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="perfil_usuario_discente.php"
+              <a class="nav-link text-white" href="perfil_usuario_docente.php"
                 >Perfil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href=""
+                >Sair</a
               >
             </li>
           </ul>
