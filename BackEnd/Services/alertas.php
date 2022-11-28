@@ -120,4 +120,30 @@
                   })
             </script>";
     }
+    function deletarEstagio()
+    {
+       echo "<script type='text/javascript'>
+                Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Sucesso!',
+                        text: 'Estágio excluido com sucesso.',
+                        showConfirmButton: true,
+                        timer: 4000
+                })
+        </script>";
+    }
+    function estagioNaoEncontrado()
+    {
+        echo "<script type='text/javascript'>
+                Swal.fire({
+                  position: 'center',
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: 'Não conseguimos localizar nenhum estágio com as informações inseridas, tente novamente.',
+                  showConfirmButton: true,
+                  timer: 4000
+                  })
+            </script>";
+    }
 ?>
