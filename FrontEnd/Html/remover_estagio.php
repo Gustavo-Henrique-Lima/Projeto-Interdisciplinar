@@ -98,15 +98,6 @@
             </p>
             <div class="row g-3">
               <div class="col-12">
-                <label for="nomeDoAluno" class="form-label"
-                  >Nome do Aluno(a)</label
-                >
-                <input
-                  type="text"
-                  name="nomeDoAluno"
-                  id="nomeDoAluno"
-                  class="form-control"
-                />
                 <label for="numeroDaMatricula" class="form-label"
                   >Número da Matrícula</label
                 >
