@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../myScript/sweetAlert.js"></script>
     <!-- Botstrap css -->
     <link
       rel="stylesheet"
@@ -65,7 +66,7 @@
       </div>
       <div class="row my-2 mx-1 py-2 border rounded">
         <div class="col-12">
-          <form action="">
+          <form action="" method="POST">
             <div class="row">
               <div>
                 <ul class="nav nav-pills nav-fill">
@@ -93,17 +94,8 @@
             </div>
             <div class="row g-3">
               <div class="col-12">
-                <label for="nomeDoAluno" class="form-label"
-                  >Nome do Aluno(a)</label
-                >
-                <input
-                  type="text"
-                  name="nomeDoAluno"
-                  id="nomeDoAluno"
-                  class="form-control"
-                />
                 <label for="numeroDaMatricula" class="form-label"
-                  >Número da Matrícula</label
+                  >Número da Matrícula do aluno(a)</label
                 >
                 <input
                   type="text"
@@ -147,12 +139,30 @@
                 </button>
               </div>
               <div class="col-6">
-                <button type="submit" class="btn btn-primary w-100 text-white">
+                <button type="submit" class="btn btn-primary w-100 text-white" name="enviar">
                   Salvar
                 </button>
               </div>
             </div>
           </form>
+           <?php
+            require_once("../../BackEnd/Services/cadastrarEstagio.php");
+            if(isset($_POST['enviar']) && isset($_POST['numeroDaMatricula']) && isset($_POST['localEstagio']) && isset($_POST['DescricaoDoEstagio'])&& isset($_POST['dataEstágio']))
+            {
+              $matricula=$_POST['numeroDaMatricula'];
+              $local=$_POST['localEstagio'];
+              $descricao=$_POST['DescricaoDoEstagio'];
+              $inicio=$_POST['dataEstágio'];
+              if(strlen($matricula)<1 || strlen($local)<1 || strlen($descricao)<1 || strlen($inicio)<1)
+              {
+                echo '<p style="color:red">Preencha todos os campos.</p>';
+              }
+              else{
+                cadastrarEstagio($matricula,$inicio,$descricao,$local);
+              }
+              
+            }
+          ?>
         </div>
       </div>
     </section>
