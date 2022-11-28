@@ -39,3 +39,5 @@ INSERT INTO aluno VALUES('10','ens8@discente.ifpe.edu.br','Everson','Silva','Nas
 SELECT * FROM professor;
 SELECT * FROM aluno;
 SELECT * FROM estagio;
+
+DELETE FROM estagio;
