@@ -133,12 +133,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="col-6">
-                <button type="button" class="btn btn-danger w-100">
-                  Cancelar
-                </button>
-              </div>
-              <div class="col-6">
+              <div class="col-12">
                 <button type="submit" class="btn btn-primary w-100 text-white" name="enviar">
                   Salvar
                 </button>
