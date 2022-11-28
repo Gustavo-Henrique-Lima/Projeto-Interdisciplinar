@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../myScript/sweetAlert.js"></script>
     <!-- Botstrap css -->
     <link
       rel="stylesheet"
@@ -65,7 +66,7 @@
       </div>
       <div class="row my-2 mx-1 py-2 border rounded">
         <div class="col-12">
-          <form action="">
+        <form action="" method="POST">
             <div class="row">
               <div>
                 <ul class="nav nav-pills nav-fill">
@@ -129,13 +130,28 @@
                 />
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-danger w-100 text-white">
-                  <a href="" class="text-white">Remover Estágio</a>
+                <button type="submit" class="btn btn-danger w-100 text-white"name="enviar">
+                  Remover Estágio
                 </button>
               </div>
-              
             </div>
           </form>
+          <?php
+            require_once("../../BackEnd/Services/deletarEstagio.php");
+            if(isset($_POST['enviar']) && isset($_POST['numeroDaMatricula']) && isset($_POST['localEstagio']) && isset($_POST['dataEstágio']))
+            {
+              $matricula=$_POST['numeroDaMatricula'];
+              $local=$_POST['localEstagio'];
+              $inicio=$_POST['dataEstágio'];
+              if(strlen($matricula)<1 || strlen($local)<1 || strlen($inicio)<1)
+              {
+                echo '<p style="color:red">Preencha todos os campos.</p>';
+              }
+              else{
+                apagarEstagio($matricula,$inicio,$local);
+              }
+            }
+          ?>
         </div>
       </div>
     </section>
