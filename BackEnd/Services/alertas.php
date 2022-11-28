@@ -68,4 +68,43 @@
                   })
             </script>";
     }
+    function cadastrouEstagio()
+    {
+        echo "<script type='text/javascript'>
+                Swal.fire({
+                  position: 'center',
+                  icon: 'success',
+                  title: 'Sucesso!',
+                  text: 'O estágio foi cadastrado com sucesso na nossa base de dados.',
+                  showConfirmButton: true,
+                  timer: 4000
+                  })
+            </script>";
+    }
+    function erroCadastrarEstagio()
+    {
+        echo "<script type='text/javascript'>
+                Swal.fire({
+                  position: 'center',
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: 'Ou você digitou uma matrícula inválida ou o aluno já possui estágio marcado para essa mesma data e hora, tente uma nova data.',
+                  showConfirmButton: true,
+                  timer: 40000
+                  })
+            </script>";
+    }
+    function senhaAlteradaComSucesso()
+    {
+        echo "<script type='text/javascript'>
+                Swal.fire({
+                  position: 'center',
+                  icon: 'success',
+                  title: 'Sucesso!',
+                  text: 'Sua senha foi alterada com sucesso.',
+                  showConfirmButton: true,
+                  timer: 4000
+                  })
+            </script>";
+    }
 ?>
