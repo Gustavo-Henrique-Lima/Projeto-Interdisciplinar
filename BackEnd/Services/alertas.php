@@ -107,4 +107,17 @@
                   })
             </script>";
     }
+    function erroAoAlterarSenha()
+    {
+        echo "<script type='text/javascript'>
+                Swal.fire({
+                  position: 'center',
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: 'Não conseguimos alterar sua senha, mas não se preocupe, o erro foi nosso, tente novamente mais tarde.',
+                  showConfirmButton: true,
+                  timer: 4000
+                  })
+            </script>";
+    }
 ?>
