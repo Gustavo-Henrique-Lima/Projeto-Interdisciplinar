@@ -1,4 +1,5 @@
 <?php
+    include_once("alertas.php");
      function alterarSenha($pass,$matricula)
      {
       include_once("conexao.php");
@@ -9,10 +10,10 @@
       $execut=$mysqli->query($sql) or die($mysqli->error);
       if($execut)
       {
-          echo "Sua senha foi alterada com sucesso!";
+            senhaAlteradaComSucesso();
       }
       else{
-          echo "Erro, tente novamente";
+        erroAoAlterarSenha();
       }
      }
 ?>

@@ -9,10 +9,10 @@
     $execut=$mysqli->query($sql) or die($mysqli->error);
     if($execut)
     {
-        echo "Sua senha foi alterada com sucesso!";
+        senhaAlteradaComSucesso();
     }
     else{
-        echo "Erro, tente novamente";
+        erroAoAlterarSenha();
     }
    }
 ?>
