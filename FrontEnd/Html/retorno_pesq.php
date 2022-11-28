@@ -1,5 +1,6 @@
 <?php
-    include("../../BackEnd/Services/protect.php");
+    include_once("../../BackEnd/Services/protect.php");
+    include_once("../../BackEnd/Services/listarEstagios.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -20,7 +21,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-      <a class="navbar-brand fontTextLeftHeader ms-1" href="criar_estagio.html"
+      <a class="navbar-brand fontTextLeftHeader ms-1" href="criar_estagio.php"
         >MyFreq</a
       >
       <button
@@ -46,7 +47,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="perfil_usuario.php"
+              <a class="nav-link text-white" href="perfil_usuario_docente.php"
                 >Perfil</a
               >
             </li>
@@ -87,22 +88,22 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td class="text-center">João Da silva</td>
-                      <td class="text-center">2012ERBJ1239</td>
-                      <td class="text-center">
-                        Hospital Júlio Alves de Lira - Belo Jardim - PE
-                      </td>
-                      <td class="text-center">12/07/2022 20:00</td>
-                      <td class="text-center">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Iure minima sequi distinctio facere accusamus
-                        harum sint ullam voluptates voluptate voluptatibus.
-                        Dicta dolore inventore autem. Omnis ad quo hic dolorem
-                        assumenda!
-                      </td>
-                    </tr>
+                    <?php
+                        $i=0;
+                          while($dados=mysqli_fetch_assoc($execut))
+                          {
+                           
+                            $i++;
+                              echo "<tr>";
+                              echo "<td>".$i."</td>";
+                              echo "<td>".$dados['nome']."</td>";
+                              echo "<td>".$dados['matricula']."</td>";
+                              echo "<td>".$dados['lugar']."</td>";
+                              $date=date_create($dados['inicio']);
+                              echo "<td>".date_format($date,"d/m/Y H:i:s")."</td>";
+                              echo "<td>".$dados['descricao']."</td>";
+                          }
+                    ?>
                   </tbody>
                 </table>
               </div>
