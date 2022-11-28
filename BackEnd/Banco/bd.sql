@@ -29,6 +29,7 @@ CREATE TABLE estagio
     inicio TIMESTAMP,
     descricao VARCHAR(80) NOT NULL,
 	lugar VARCHAR(50) NOT NULL,
+    presenca VARCHAR(9),
     PRIMARY KEY (matricula_aluno,inicio),
     FOREIGN KEY (matricula_aluno) REFERENCES aluno(matricula)
 );
