@@ -65,7 +65,7 @@
       </div>
       <div class="row my-2 mx-1 py-2 border rounded">
         <div class="col-12">
-          <form action="">
+          <form action="retorno_pesq_discente.php" method="POST">
             <div class="row">
               <div>
                 <ul class="nav nav-pills nav-fill">
@@ -94,7 +94,7 @@
             <div class="row g-3">
               <div class="col-12">
                 <label for="numeroDaMatricula" class="form-label"
-                  >Número da Matrícula</label
+                  >Número da Matrícula do aluno(a)</label
                 >
                 <input
                   type="text"
@@ -102,30 +102,10 @@
                   id="numeroDaMatricula"
                   class="form-control"
                 />
-                <label for="localEstagio" class="form-label"
-                  >Local do Estágio</label
-                >
-                <input
-                  type="text"
-                  name="localEstagio"
-                  id="localEstagio"
-                  class="form-control"
-                />
-              </div>
-              <div class="col-12">
-                <label for="dataEstagio" class="form-label"
-                  >Data e Hora do Estágio</label
-                >
-                <input
-                  type="datetime-local"
-                  name="dataEstágio"
-                  id="dataEstágio"
-                  class="form-control"
-                />
               </div>
               <div class="col-12">
               <button type="submit" class="btn btn-success w-100 text-white">
-                  <a href="" class="text-white">Pesquisar</a>
+                  <a class="text-white">Pesquisar</a>
                 </button>
               </div>
             </div>

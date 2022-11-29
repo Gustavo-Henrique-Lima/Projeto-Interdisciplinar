@@ -1,5 +1,13 @@
 <?php
     include("../../BackEnd/Services/protect.php");
+    include("../../BackEnd/Services/conexao.php");
+    $matricula=$_POST['numeroDaMatricula'];
+    $matricula=$mysqli->escape_string($matricula);
+    $sql="SELECT estagio.lugar,estagio.descricao,estagio.inicio,aluno.nome,aluno.matricula
+    FROM estagio 
+    INNER JOIN aluno ON estagio.matricula_aluno=aluno.matricula
+    WHERE estagio.inicio>=now() AND aluno.matricula='$matricula';";
+    $execut=$mysqli->query($sql) or die($mysqli->error);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -87,22 +95,22 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td class="text-center">João Da silva</td>
-                      <td class="text-center">2012ERBJ1239</td>
-                      <td class="text-center">
-                        Hospital Júlio Alves de Lira - Belo Jardim - PE
-                      </td>
-                      <td class="text-center">12/07/2022 20:00</td>
-                      <td class="text-center">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Iure minima sequi distinctio facere accusamus
-                        harum sint ullam voluptates voluptate voluptatibus.
-                        Dicta dolore inventore autem. Omnis ad quo hic dolorem
-                        assumenda!
-                      </td>
-                    </tr>
+                  <?php
+                       $i=0;
+                       while($dados=mysqli_fetch_assoc($execut))
+                       {
+                        
+                         $i++;
+                           echo "<tr>";
+                           echo "<td>".$i."</td>";
+                           echo "<td>".$dados['nome']."</td>";
+                           echo "<td>".$dados['matricula']."</td>";
+                           echo "<td>".$dados['lugar']."</td>";
+                           $date=date_create($dados['inicio']);
+                           echo "<td>".date_format($date,"d/m/Y H:i:s")."</td>";
+                           echo "<td>".$dados['descricao']."</td>";
+                       }
+                  ?>
                   </tbody>
                 </table>
               </div>
