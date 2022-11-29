@@ -21,7 +21,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-      <a class="navbar-brand fontTextLeftHeader ms-1" href="retorno_pesq_discente.php">MyFreq</a>
+      <a class="navbar-brand fontTextLeftHeader ms-1" href="discente_inicio.php">MyFreq</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -41,7 +41,7 @@
               <a
                 class="nav-link active text-white"
                 aria-current="page"
-                href="retorno_pesq_discente.php"
+                href="discente_inicio.php"
                 >Home</a
               >
             </li>

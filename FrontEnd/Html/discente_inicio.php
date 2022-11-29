@@ -1,7 +1,7 @@
 <?php
     include("../../BackEnd/Services/protect.php");
     include("../../BackEnd/Services/conexao.php");
-    $matricula=$_POST['numeroDaMatricula'];
+    $matricula=$_SESSION['matricula'];
     $matricula=$mysqli->escape_string($matricula);
     $sql="SELECT estagio.lugar,estagio.descricao,estagio.inicio,aluno.nome,aluno.matricula
     FROM estagio 
@@ -28,7 +28,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-      <a class="navbar-brand fontTextLeftHeader ms-1" href="criar_estagio.php"
+      <a class="navbar-brand fontTextLeftHeader ms-1" href="discente_inicio.php"
         >MyFreq</a
       >
       <button
@@ -49,12 +49,12 @@
               <a
                 class="nav-link active text-white"
                 aria-current="page"
-                href="criar_estagio.php.php"
+                href="discente_inicio.php"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="perfil_usuario_docente.php"
+              <a class="nav-link text-white" href="perfil_usuario_discente.php"
                 >Perfil</a
               >
             </li>
