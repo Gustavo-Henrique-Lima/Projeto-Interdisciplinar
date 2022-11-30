@@ -65,7 +65,7 @@
       </div>
       <div class="row my-2 mx-1 py-2 border rounded">
         <div class="col-12">
-          <form action="">
+          <form action="modificar_estagio.php" method="POST">
             <div class="row">
               <div>
                 <ul class="nav nav-pills nav-fill">
@@ -102,15 +102,6 @@
                   id="numeroDaMatricula"
                   class="form-control"
                 />
-                <label for="localEstagio" class="form-label"
-                  >Local do Estágio</label
-                >
-                <input
-                  type="text"
-                  name="localEstagio"
-                  id="localEstagio"
-                  class="form-control"
-                />
               </div>
               <div class="col-12">
                 <label for="dataEstagio" class="form-label"
@@ -125,7 +116,7 @@
               </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-success w-100 text-white">
-                  <a href="" class="text-white">Buscar</a>
+                  <a class="text-white">Buscar</a>
                 </button>
               </div>
             </div>
