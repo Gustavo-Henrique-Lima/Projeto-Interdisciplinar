@@ -3,7 +3,7 @@
     include("../../BackEnd/Services/conexao.php");
     $matricula=$_POST['numeroDaMatricula'];
     $matricula=$mysqli->escape_string($matricula);
-    $sql="SELECT estagio.lugar,estagio.descricao,estagio.inicio,aluno.nome,aluno.matricula
+    $sql="SELECT estagio.lugar,estagio.descricao,estagio.inicio,aluno.nome,aluno.matricula,estagio.presenca
     FROM estagio 
     INNER JOIN aluno ON estagio.matricula_aluno=aluno.matricula
     WHERE estagio.inicio>=now() AND aluno.matricula='$matricula';";
@@ -92,6 +92,7 @@
                       <th class="text-center" scope="col">Local do Estágio</th>
                       <th class="text-center" scope="col">Data e Hora</th>
                       <th class="text-center" scope="col">Descrição</th>
+                      <th class="text-center" scope="col">Presença</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -109,10 +110,15 @@
                            $date=date_create($dados['inicio']);
                            echo "<td>".date_format($date,"d/m/Y H:i:s")."</td>";
                            echo "<td>".$dados['descricao']."</td>";
+                           echo "<td>".$dados['presenca']."</td>";
                        }
                   ?>
                   </tbody>
                 </table>
+              </div>
+              <div class="col-12">
+                <a href="pesquisar_estagio.php" class="btn btn-primary w-100 text-white bg-danger"
+                  >Voltar</a>
               </div>
             </div>
           </form>
