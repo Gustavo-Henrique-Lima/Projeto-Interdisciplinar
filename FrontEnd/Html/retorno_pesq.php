@@ -85,6 +85,7 @@
                       <th class="text-center" scope="col">Local do Estágio</th>
                       <th class="text-center" scope="col">Data e Hora</th>
                       <th class="text-center" scope="col">Descrição</th>
+                      <th class="text-center" scope="col">Presença</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -102,6 +103,7 @@
                               $date=date_create($dados['inicio']);
                               echo "<td>".date_format($date,"d/m/Y H:i:s")."</td>";
                               echo "<td>".$dados['descricao']."</td>";
+                              echo "<td>".$dados['presenca']."</td>";
                           }
                     ?>
                   </tbody>
