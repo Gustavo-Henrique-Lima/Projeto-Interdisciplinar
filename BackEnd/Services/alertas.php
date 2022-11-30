@@ -146,4 +146,30 @@
                   })
             </script>";
     }
+    function estagioAtualizadoComSucesso()
+    {
+        echo "<script type='text/javascript'>
+                Swal.fire({
+                  position: 'center',
+                  icon: 'success',
+                  title: 'Sucesso!',
+                  text: 'O estágio foi atualizado com sucesso.',
+                  showConfirmButton: true,
+                  timer: 4000
+                  })
+            </script>";
+    }
+    function error404()
+    {
+        echo "<script type='text/javascript'>
+                Swal.fire({
+                  position: 'center',
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: 'Não conseguimos atualizar o estágio, mas não se preocupe, o erro foi nosso, tente novamente mais tarde.',
+                  showConfirmButton: true,
+                  timer: 4000
+                  })
+            </script>";
+    }
 ?>
