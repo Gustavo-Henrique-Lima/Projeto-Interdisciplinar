@@ -124,7 +124,7 @@
                 />
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary w-100 text-white">
+                <button type="submit" class="btn btn-success w-100 text-white">
                   <a href="" class="text-white">Buscar</a>
                 </button>
               </div>

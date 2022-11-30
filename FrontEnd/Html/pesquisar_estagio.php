@@ -109,7 +109,7 @@
                </button>
               </div>
               <div class="col-6">
-                  <a href="retorno_pesq.php" class="btn btn-primary w-100 text-white">Visualizar todos os estágios</a>
+                  <a href="retorno_pesq.php" class="btn btn-success w-100 text-white">Visualizar todos os estágios</a>
               </div>
             </div>
           </form>
