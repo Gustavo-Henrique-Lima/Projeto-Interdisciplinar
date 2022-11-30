@@ -1,4 +1,5 @@
 <?php
+    include_once("alertas.php");
    function alterarSenha($pass,$matricula)
    {
     include_once("conexao.php");
