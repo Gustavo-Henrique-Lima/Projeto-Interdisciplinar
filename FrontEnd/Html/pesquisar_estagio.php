@@ -103,19 +103,16 @@
                   class="form-control"
                 />
               </div>
-              <div class="col-12">
+              <div class="col-6">
               <button type="submit" class="btn btn-success w-100 text-white">
                   <a class="text-white">Pesquisar</a>
-                </button>
+               </button>
+              </div>
+              <div class="col-6">
+                  <a href="retorno_pesq.php" class="btn btn-primary w-100 text-white">Visualizar todos os estágios</a>
               </div>
             </div>
           </form>
-          <br>
-          <div class="col-12" >
-              <button class="btn btn-primary w-100 text-white">
-                <a href="retorno_pesq.php" class="text-white">Visualizar todos os estágios</a>
-              </button>
-          </div>
         </div>
       </div>
     </section>
