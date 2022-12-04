@@ -1,7 +1,7 @@
 const btn = document.querySelector("button");
 const divMessage = document.querySelector(".alert");
 
-const msg = "Algumas funcionalidades só estão disponíveis para docente.";
+const msg = "Algumas funcionalidades só estão disponíveis para docentes.";
 
 
 function ativar(msg) 
