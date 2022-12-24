@@ -27,8 +27,10 @@ edição e remoção de estágios para os discentes, que por sua vez são capaze
 # Tecnologias utilizadas
 ## Back end
 - PHP
+- Protocolo SMTP para envio de email de recuperação de senha
 ## Front end
-- HTML / CSS / SASS
+- HTML / CSS / SASS / JS
+- Biblioteca SweetAlert para interação com o usuário
 ## Implantação em produção
 - Back end: Xampp
 - Front end web: Xampp
