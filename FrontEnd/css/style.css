@@ -102,15 +102,25 @@ a {
 }
 
 .alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
   background-color: #49a490;
   color: white;
-  width: 10rem;
-  height: 10remx;
+  width: 20rem;
+  height: 20rem;
   position: relative;
-  top: 0.1rem;
-  left: 11.5rem;
+  top: -2rem;
+  left: 7rem;
   box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.3);
   opacity: 0.5;
+  display: none;
+}
+
+.form {
+  display: hidden;
 }
 
 @media (min-width: 992px) {

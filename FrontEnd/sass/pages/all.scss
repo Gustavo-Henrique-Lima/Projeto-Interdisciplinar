@@ -108,13 +108,23 @@ a {
 }
 
 .alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
   background-color: $corPrimaria;
   color: white;
-  width: 10rem;
-  height: 10remx;
+  width: 20rem;
+  height: 20rem;
   position: relative;
-  top: 0.1rem;
-  left: 11.5rem;
+  top: -2rem;
+  left: 7rem;
   box-shadow: $shadow;
   opacity: 0.5;
+  display: none;
+}
+
+.form {
+  display: hidden;
 }

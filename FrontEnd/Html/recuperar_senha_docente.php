@@ -46,6 +46,7 @@
             </div>
             <div>Enviando...</div>
           </div>
+          <div class="form">
           <p class="colorParag fontSizeBody paddingItens">Informe seu email:</p>
           <div
             style="width: 22rem"
@@ -83,6 +84,7 @@
                         }
                     }
             ?>
+          </div>
         </div>
       </div>
     </section>
