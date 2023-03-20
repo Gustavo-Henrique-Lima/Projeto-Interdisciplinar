@@ -18,7 +18,7 @@
     <title>Login</title>
   </head>
   <body class="bgImage">
-  <div class="alert"></div>
+  
     <section class="container-fluid text-center alinhamento">
       <div class="row tamcontainer">
         <div

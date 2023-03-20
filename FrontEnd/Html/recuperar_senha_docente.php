@@ -18,7 +18,7 @@
     <!--Adicionando Favicon-->
   </head>
   <body class="bgImage">
-  <div class="alert"></div>
+  
     <section class="container-fluid text-center alinhamento">
       <div class="row tamcontainer">
         <div
@@ -40,6 +40,12 @@
           </a>
         </div>
         <div class="col-lg bg-white Login paddingPagesUp">
+          <div class="alert">
+            <div class="spinner-border text-light" role="status">
+              <span class="sr-only"></span>
+            </div>
+            <div>Enviando...</div>
+          </div>
           <p class="colorParag fontSizeBody paddingItens">Informe seu email:</p>
           <div
             style="width: 22rem"

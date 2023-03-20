@@ -106,3 +106,15 @@ a {
 .sombra {
   box-shadow: $shadow;
 }
+
+.alert {
+  background-color: $corPrimaria;
+  color: white;
+  width: 10rem;
+  height: 10remx;
+  position: relative;
+  top: 0.1rem;
+  left: 11.5rem;
+  box-shadow: $shadow;
+  opacity: 0.5;
+}
