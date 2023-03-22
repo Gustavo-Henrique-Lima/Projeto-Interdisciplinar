@@ -40,7 +40,7 @@
           </a>
         </div>
         <div class="col-lg bg-white Login paddingPagesUp">
-          <div class="alert">
+          <div class="alertSend">
               <div class="spinner-border text-light" role="status">
                 <span class="sr-only"></span>
               </div>
@@ -98,7 +98,7 @@
     {
       const element = document.querySelector('.form');
       element.style.display = 'none';
-      const spinnerElement = document.querySelector('.alert');
+      const spinnerElement = document.querySelector('.alertSend');
       spinnerElement.style.display = 'flex';
     });
   </script>
