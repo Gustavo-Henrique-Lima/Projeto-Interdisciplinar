@@ -99,7 +99,7 @@
       const element = document.querySelector('.form');
       element.style.display = 'none';
       const spinnerElement = document.querySelector('.alert');
-      spinnerElement.style.display = 'block';
+      spinnerElement.style.display = 'flex';
     });
   </script>
   </body>
