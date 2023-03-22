@@ -15,14 +15,14 @@
             $total=$execut->num_rows;
             if($total>0)
             {   
-                showModel();
+             //   showModel();
                 $senhaEmail=time();
                 $novasenha=password_hash($senhaEmail,PASSWORD_DEFAULT);
                 if(mail($email,"Redefinição de senha","Olá ".$dado["nome"]. ", sua senha foi alterada com sucesso, utilize a seguinte senha para acessar o MyFreq: ".$senhaEmail."\n Recomendamos que você acesse o MyFreq procure por redefinir senha e redefina a sua senha."))
                 {
                     $sql_code="UPDATE professor SET senha='$novasenha' WHERE email='$email'";
                     $sql_query=$mysqli->query($sql_code) or die($mysqli->error);
-                    unshowModel();
+                   // unshowModel();
                     enviouEmail();
                 }
             }

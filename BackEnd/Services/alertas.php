@@ -173,21 +173,13 @@
             </script>";
     }
 
-    function showModel(){
+    function showModel()
+    {
         echo "<script type='text/javascript'>
-       const element = document.querySelector('.form');
-       element.style.display = 'none';
-       const spinnerElement = document.querySelector('.alert');
-       spinnerElement.style.display = 'hidden';
-    </script>";
-    }
-
-    function unshowModel(){
-        echo "<script type='text/javascript'>
-       const element = document.querySelector('.form');
-       element.style.display = 'hidden';
-       const spinnerElement = document.querySelector('.alert');
-       spinnerElement.style.display = 'none';
-    </script>";
+                const element = document.querySelector('.form');
+                element.style.display = 'none';
+                const spinnerElement = document.querySelector('.alert');
+                spinnerElement.style.display = 'block';
+        </script>";
     }
 ?>

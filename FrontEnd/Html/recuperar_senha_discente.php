@@ -52,7 +52,7 @@
             style="width: 22rem"
             class="input-group input-group-sm mb-4 m-auto"
           >
-          <form style="width: 22rem" class="input-group input-group-sm mb-4 m-auto" action="recuperar_senha_discente.php" method="POST">
+          <form id="formEmail" style="width: 22rem" class="input-group input-group-sm mb-4 m-auto" method="POST" action="recuperar_senha_discente.php">
             <span
               style="height: 2rem"
               class="input-group-text bg-primary text-white mt-4"
@@ -88,9 +88,19 @@
          </div>
       </div>
     </section>
+    <script src="../myScript/jquery-3.6.4.min.js"></script>
     <!--Adicionando script Bootstrap-->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <!--Script Local-->
     <script src="../myScript/script.js"></script>
+    <script>
+    $('#formEmail').submit(function(e) 
+    {
+      const element = document.querySelector('.form');
+      element.style.display = 'none';
+      const spinnerElement = document.querySelector('.alert');
+      spinnerElement.style.display = 'block';
+    });
+  </script>
   </body>
 </html>

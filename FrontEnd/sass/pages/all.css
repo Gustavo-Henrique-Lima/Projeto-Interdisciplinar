@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.bgImage {
+  background-image: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fontTextLeftHeader {
+  font-family: "Almarai", "arial", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.fontTextLeftBody {
+  font-family: "Antic Didone", "arial", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.alinhamento {
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 68%;
+}
+
+.tamcontainer {
+  width: 60rem;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.colorParag {
+  color: #49a490;
+  font-weight: bold;
+}
+
+.message {
+  font-family: "Antic Didone", "arial", sans-serif;
+  font-weight: bold;
+  padding: 10px 10px 10px 20px;
+  position: fixed;
+  top: 25px;
+  left: 0px;
+  background-color: #fff;
+  border-radius: 0px 30px 30px 0px;
+  color: #49a490;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  animation: slidein 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slideend 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideend {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+.btnLogin:hover {
+  color: white;
+}
+
+.btnInf:hover {
+  color: #49a490;
+}
+
+.paddingPagesUp {
+  padding-top: 7rem;
+}
+
+.paddingPagesDown {
+  margin-bottom: 7rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sombra {
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.3);
+}/*# sourceMappingURL=all.css.map */

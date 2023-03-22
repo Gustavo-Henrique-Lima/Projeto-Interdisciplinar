@@ -1,0 +1,99 @@
+@media (min-width: 992px) {
+  .paddingItens {
+    padding-bottom: 2rem;
+  }
+  .controlScreenIndex {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 991px) {
+  .fontSizeHeader {
+    font-size: 1.1rem;
+  }
+  .controlScreenIndex {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .paddingPagesUp {
+    padding-top: 0;
+  }
+  .paddingPagesDown {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 425px) {
+  .controlScreenIndex {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .fontSizeHeader {
+    font-size: 1.2rem;
+  }
+  .fontSizeBody {
+    font-size: 0.8rem;
+  }
+  .btnSize {
+    width: 4rem;
+    font-size: 0.5rem;
+  }
+  .message {
+    font-size: 0.6rem;
+  }
+  .paddingPagesUp {
+    padding-top: 0;
+  }
+  .paddingPagesDown {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 350px) {
+  .controlScreenIndex {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .controlScreenIndex {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .fontSizeHeader {
+    font-size: 0.9rem;
+  }
+  .fontSizeBody {
+    font-size: 0.7rem;
+  }
+  .message {
+    font-size: 0.6rem;
+  }
+  .paddingPagesUp {
+    padding-top: 0;
+  }
+  .paddingPagesDown {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 280px) {
+  .controlScreenIndex {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .controlScreenIndex {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .fontSizeHeader {
+    font-size: 0.8rem;
+  }
+  .fontSizeBody {
+    font-size: 0.5rem;
+  }
+  .message {
+    font-size: 0.6rem;
+  }
+  .paddingPagesUp {
+    padding-top: 0;
+  }
+  .paddingPagesDown {
+    margin-bottom: 0;
+  }
+}/*# sourceMappingURL=media.css.map */
